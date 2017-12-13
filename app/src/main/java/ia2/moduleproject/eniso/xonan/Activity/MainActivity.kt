@@ -1,6 +1,7 @@
 package ia2.moduleproject.eniso.xonan.Activity
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -16,13 +17,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var url = ""
         tv1.text= User.toString()
+        var id = 0
         submit.setOnClickListener {
-            var user = user.text //hamza.slama
-            var pass = pass.text //hamza0277
+            var user = user.text
+
+            var pass = pass.text
             url = "http://eniso.info/ws/login/$user?password=$pass"
             getDataFromApi(this,url).execute()
             tv1.text= User.toString()
-
+            if (id >=1 && User!!.domain == "main"){
+                Intent(this,Inspection::class.java).apply {
+                    startActivity(this)
+                }
+            }
+            id ++
         }
 
     }
