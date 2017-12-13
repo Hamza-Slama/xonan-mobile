@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Xonan</string>
+<<<<<<< HEAD
     <string name="btn_submit">Sumbit</string>
     <string name="dateExp"> 12/12/2017 - 13/12/2017 </string>
+=======
+    <string name="action_settings">Settings</string>
+
+
+
+>>>>>>> master
 </resources>
