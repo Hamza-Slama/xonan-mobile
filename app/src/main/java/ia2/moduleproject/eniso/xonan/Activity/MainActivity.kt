@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var url = ""
-        tv1.text= User.toString()
+        tv1.text= User.toString()// for show the json file
         var id = 0
-        submit.setOnClickListener {
-            var user = user.text
+        submit.setOnClickListener { // login button
+            var user = user.text // login name
 
             var pass = pass.text
             url = "http://eniso.info/ws/login/$user?password=$pass"
