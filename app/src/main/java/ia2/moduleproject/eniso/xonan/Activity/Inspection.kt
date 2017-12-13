@@ -3,22 +3,38 @@ package ia2.moduleproject.eniso.xonan.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import ia2.moduleproject.eniso.xonan.Adapter.CostomAdapter
-import ia2.moduleproject.eniso.xonan.Model.Elements
+import ia2.moduleproject.eniso.xonan.Adapter.MyQuestionAdapter
+import ia2.moduleproject.eniso.xonan.Model.ListOfQuestionModel
+import ia2.moduleproject.eniso.xonan.Model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
 import kotlinx.android.synthetic.main.activity_inspection.*
+import android.widget.Toast
 
 class Inspection : AppCompatActivity() {
 
-    var costomAdapter: CostomAdapter?=null
-    var listOfElement:ArrayList<Elements> = ArrayList()
+    var costomAdapter: MyQuestionAdapter?=null
+    var listOfQuestionInsp1:ArrayList<QuestionModel> = ArrayList()
+    var listOfQuestionInsp2:ArrayList<QuestionModel> = ArrayList()
+    var listOfInspection:ArrayList<ListOfQuestionModel> = ArrayList()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inspection)
-        loadOfElements()
-        costomAdapter = CostomAdapter(listOfElement)
+        loadQuestionOfInspectionOne()
+        loadQuestionOfInspectionTwo()
+        addListOfInspection()
+        val bundle = intent.extras
+        val id =bundle.getString("id").toString()
+        var r = listOfInspection[0]
+        println("r = $r" )
+        if (id == "1") {
+            costomAdapter = MyQuestionAdapter(listOfQuestionInsp1)
+            Toast.makeText(this,"id == 1 ",Toast.LENGTH_LONG).show()
+        }else if (id == "2"){
+            Toast.makeText(this,"id == 2 ",Toast.LENGTH_LONG).show()
+            costomAdapter = MyQuestionAdapter(listOfQuestionInsp2)
+        }
         var layoutManager = LinearLayoutManager(this@Inspection)
         rec_view.layoutManager = layoutManager
         rec_view.adapter = costomAdapter
@@ -26,19 +42,41 @@ class Inspection : AppCompatActivity() {
 
 
 
-    fun loadOfElements(){
-        listOfElement.add(Elements("PC", "checkbox", arrayListOf("LENOVO", "DELL", "ASUS", "HP")))
-        listOfElement.add(Elements("Natioannailty", "checkbox", arrayListOf("Tunisia", "Algeria", "egypt"," Slovakia")))
-        listOfElement.add(Elements("Color", "checkbox", arrayListOf("Black", "White", "Green")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
-        listOfElement.add(Elements("Team2", "checkbox", arrayListOf("team1", "team2", "team3","item4")))
-        listOfElement.add(Elements("Team3", "checkbox", arrayListOf("team1", "team2")))
-        listOfElement.add(Elements("Natioannailty", "checkbox", arrayListOf("Tunisia", "France", "USA")))
+    fun loadQuestionOfInspectionOne(){
+        listOfQuestionInsp1.add(QuestionModel("PC", "checkbox", arrayListOf("LENOVO", "DELL", "ASUS", "HP")))
+        listOfQuestionInsp1.add(QuestionModel("Natioannailty", "checkbox", arrayListOf("Tunisia", "Algeria", "egypt"," Slovakia")))
+        listOfQuestionInsp1.add(QuestionModel("Color", "checkbox", arrayListOf("Black", "White", "Green")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team1", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp1.add(QuestionModel("Team2", "checkbox", arrayListOf("team1", "team2", "team3","item4")))
+        listOfQuestionInsp1.add(QuestionModel("Team3", "checkbox", arrayListOf("team1", "team2")))
+        listOfQuestionInsp1.add(QuestionModel("Natioannailty", "checkbox", arrayListOf("Tunisia", "France", "USA")))
+    }
+    fun loadQuestionOfInspectionTwo(){
+        listOfQuestionInsp2.add(QuestionModel("From ins2 ", "checkbox", arrayListOf("ins2", "ins2", "ins2", "ins2")))
+        listOfQuestionInsp2.add(QuestionModel("ins2", "checkbox", arrayListOf("ins2", "ins2", "ins2"," ins2")))
+        listOfQuestionInsp2.add(QuestionModel("Color", "checkbox", arrayListOf("ins2", "ins2", "ins2")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("ins2", "ins2", "ins2")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("ins2", "ins2", "ins2")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("ins2", "ins2", "ins2")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2", "team3")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2", "team3","item4")))
+        listOfQuestionInsp2.add(QuestionModel("ins2 ", "checkbox", arrayListOf("team1", "team2")))
+        listOfQuestionInsp2.add(QuestionModel("Natioannailty", "checkbox", arrayListOf("ins2", "ins2", "ins2")))
+    }
+
+    fun addListOfInspection(){
+        listOfInspection.add(ListOfQuestionModel(listOfQuestionInsp1))
+        listOfInspection.add(ListOfQuestionModel(listOfQuestionInsp2))
     }
 }
+
+

@@ -7,11 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import ia2.moduleproject.eniso.xonan.Model.Elements
+import ia2.moduleproject.eniso.xonan.Model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
 
 
-class CostomAdapter(dataElements: ArrayList<Elements>) : RecyclerView.Adapter<CostomAdapter.CostomViewHolder>() {
+class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>) : RecyclerView.Adapter<MyQuestionAdapter.CostomViewHolder>() {
 
     var mdataElements = dataElements
     var mCheckedIds = SparseBooleanArray()

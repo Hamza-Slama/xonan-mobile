@@ -20,7 +20,7 @@ import org.json.JSONObject
  */
 var User: UserInformation? = null
 
-class getDataFromApi() : AsyncTask<Void, Void, String>() {
+class getDataLoginFromApi() : AsyncTask<Void, Void, String>() {
 
 
     var context: Context? = null
