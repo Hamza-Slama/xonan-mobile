@@ -18,20 +18,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-<<<<<<< HEAD
+
         var urlLogin = ""
         tv1.text= User.toString()
         var id = 0
 
-        submit.setOnClickListener {
-            var user = user.text
-=======
-        var url = ""
-        tv1.text= User.toString()// for show the json file
-        var id = 0
+
         submit.setOnClickListener { // login button
             var user = user.text // login name
->>>>>>> master
+
 
             var pass = pass.text
 
