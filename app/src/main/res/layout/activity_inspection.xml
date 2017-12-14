@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
     <Button
         android:text="Submit"
-        android:id="@+id/btn_submit"
+        android:id="@+id/btn_submit_reponse"
         android:layout_below="@+id/rec_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

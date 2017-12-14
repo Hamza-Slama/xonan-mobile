@@ -1,5 +1,6 @@
 package ia2.moduleproject.eniso.xonan.Adapter
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.util.SparseBooleanArray
 import android.view.LayoutInflater
@@ -9,10 +10,14 @@ import android.widget.CheckBox
 import android.widget.TextView
 import ia2.moduleproject.eniso.xonan.Model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
+import android.widget.Toast
+import ia2.moduleproject.eniso.xonan.Constant.MyREPONSE
 
 
-class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>) : RecyclerView.Adapter<MyQuestionAdapter.CostomViewHolder>() {
-
+class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context) : RecyclerView.Adapter<MyQuestionAdapter.CostomViewHolder>() {
+    var context = context
     var mdataElements = dataElements
     var mCheckedIds = SparseBooleanArray()
     var mCheckedIds2 = SparseBooleanArray()
@@ -24,6 +29,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>) : RecyclerView.A
     var mCheckedRadioIds3 = SparseBooleanArray()
     var mCheckedRadioIds4 = SparseBooleanArray()
     var mCheckedBoxId: Array<SparseBooleanArray>? = null
+
 
     //TODO : position of each element
 
@@ -76,6 +82,10 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>) : RecyclerView.A
         return (CostomViewHolder(view))
     }
 
+
+
+
+
     class CostomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var element_name_tv: TextView = itemView.findViewById(R.id.title_tv)
         var check_box: CheckBox = itemView.findViewById(R.id.chk_box)
@@ -87,8 +97,28 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>) : RecyclerView.A
 
     }
 
+//TODO
+    fun saveQuestionReponse() {
+        val infofile :SharedPreferences= context.getSharedPreferences(MyREPONSE, Context.MODE_PRIVATE)
+        val editor = infofile.edit()
+        var str ="hamza"
+        str += "\n slama"
+        editor.putString("username", str)
+//        editor.putString("pass", passwordd.getText().toString())
+        editor.apply()
+        Toast.makeText(context, "saved!", Toast.LENGTH_LONG).show()
+    }
+//TODO
+    fun getQuestionReponse() :String{
+        val infofile = context.getSharedPreferences(MyREPONSE, Context.MODE_PRIVATE)
+        val reponse = infofile.getString("username", "")
+//        val pw = infofile.getString("pass", "")
+//        usernamee.setText(name)
+//        passwordd.setText(pw)
+        Toast.makeText(context, reponse, Toast.LENGTH_LONG).show()
+        return reponse
 
-
+    }
 
 
 
