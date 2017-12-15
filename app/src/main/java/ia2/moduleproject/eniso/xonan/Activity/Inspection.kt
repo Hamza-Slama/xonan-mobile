@@ -13,6 +13,7 @@ import ia2.moduleproject.eniso.xonan.R
 import kotlinx.android.synthetic.main.activity_inspection.*
 import android.widget.Toast
 import ia2.moduleproject.eniso.xonan.Constant.MyREPONSE
+import ia2.moduleproject.eniso.xonan.Dialog.AlertDialogShowReponse
 
 class Inspection : AppCompatActivity() {
 
@@ -53,12 +54,17 @@ class Inspection : AppCompatActivity() {
         btn_submit_reponse.setOnClickListener {
 
             var saved = costomAdapter!!.saveQuestionReponse()
+            var savedReponse = costomAdapter!!.getChekedList()
             Handler().postDelayed({
                 display = costomAdapter!!.getQuestionReponse()
             },3000)
-            println("nitem = $nItem")
-            println("saved = $saved")
-            println("display = $display")
+//            println("nitem = $nItem")
+//            println("saved = $saved")
+//            println("display = $display")
+            Toast.makeText(this, savedReponse, Toast.LENGTH_LONG).show()
+            println(savedReponse)
+            AlertDialogShowReponse(this,savedReponse)
+
 
         }
 

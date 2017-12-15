@@ -29,7 +29,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
     var mCheckedRadioIds3 = SparseBooleanArray()
     var mCheckedRadioIds4 = SparseBooleanArray()
     var mCheckedBoxId: Array<SparseBooleanArray>? = null
-
+    var arrOfCheckedIds = arrayListOf(mCheckedIds, mCheckedIds2, mCheckedIds3, mCheckedIds4)
 
     //TODO : position of each element
 
@@ -37,7 +37,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
         var arrOfCheckBox = arrayListOf(holder!!.check_box, holder.check_box2, holder.check_box3, holder.check_box4)
         /* var arrOfRadioButton = arrayListOf(holder!!.RadioButton1, holder.RadioButton2, holder.RadioButton3, holder.RadioButton4)*/
 
-        var arrOfCheckedIds = arrayListOf(mCheckedIds, mCheckedIds2, mCheckedIds3, mCheckedIds4)
+
         var arrOfCheckedRadioButtonIds = arrayListOf(mCheckedRadioIds, mCheckedRadioIds2, mCheckedRadioIds3, mCheckedRadioIds3)
         var model = mdataElements[position]
 
@@ -57,6 +57,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
                     println(" position $position")
                     arrOfCheckBox[i].setOnClickListener {
                         checkCheckBox(position, !arrOfCheckedIds[i].get(position), arrOfCheckedIds[i])
+                        getChekedList ()
                     }
                 }
             }
@@ -118,6 +119,27 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
         Toast.makeText(context, reponse, Toast.LENGTH_LONG).show()
         return reponse
 
+    }
+
+
+    fun getChekedList () :String{
+        var test = 0
+       var  count =  mdataElements.size
+        var str =""
+        for ( position in 0 .. count -1) {
+            for (i in 0..3) {
+                if (arrOfCheckedIds[i].get(position)) {
+                    if (test == 0 ) {
+                        str += "${mdataElements[position].Title} :\n"
+                        test = 1
+                    }
+                    str +="   Reponse : ${mdataElements[position].content[i]} \n"
+                }
+            }
+            test = 0
+        }
+        if (str =="")str = "No Reponse "
+        return str
     }
 
 
