@@ -107,7 +107,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
         editor.putString("username", str)
 //        editor.putString("pass", passwordd.getText().toString())
         editor.apply()
-        Toast.makeText(context, "saved!", Toast.LENGTH_LONG).show()
+//        Toast.makeText(context, "saved!", Toast.LENGTH_LONG).show()
     }
 //TODO
     fun getQuestionReponse() :String{
@@ -116,7 +116,7 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
 //        val pw = infofile.getString("pass", "")
 //        usernamee.setText(name)
 //        passwordd.setText(pw)
-        Toast.makeText(context, reponse, Toast.LENGTH_LONG).show()
+//        Toast.makeText(context, reponse, Toast.LENGTH_LONG).show()
         return reponse
 
     }
@@ -126,14 +126,16 @@ class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context
         var test = 0
        var  count =  mdataElements.size
         var str =""
+        var countreponse = 0
         for ( position in 0 .. count -1) {
             for (i in 0..3) {
                 if (arrOfCheckedIds[i].get(position)) {
                     if (test == 0 ) {
-                        str += "${mdataElements[position].Title} :\n"
+                        countreponse++
+                        str += "$countreponse/${mdataElements[position].Title} :\n"
                         test = 1
                     }
-                    str +="   Reponse : ${mdataElements[position].content[i]} \n"
+                    str +="   * Reponse : ${mdataElements[position].content[i]} \n"
                 }
             }
             test = 0

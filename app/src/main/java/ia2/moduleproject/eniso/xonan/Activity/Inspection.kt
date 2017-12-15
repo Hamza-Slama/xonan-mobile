@@ -30,42 +30,32 @@ class Inspection : AppCompatActivity() {
         loadQuestionOfInspectionTwo()
         addListOfInspection()
         var display = ""
-
-
-
-//        val bundle = intent.extras
-//        val id =bundle.getString("id").toString()
+        val bundle = intent.extras
+        val id =bundle.getString("id").toString()
 //        var r = listOfInspection[0]
-//        println("r = $r" )
-//        if (id == "1") {
-//            costomAdapter = MyQuestionAdapter(listOfQuestionInsp1,this)
-//            Toast.makeText(this,"id == 1 ",Toast.LENGTH_LONG).show()
-//        }else if (id == "2"){
-//            Toast.makeText(this,"id == 2 ",Toast.LENGTH_LONG).show()
-//            costomAdapter = MyQuestionAdapter(listOfQuestionInsp2,this)
-//        }
+        if (id == "1") {
+            costomAdapter = MyQuestionAdapter(listOfQuestionInsp1,this)
+        }else if (id == "2"){
+            costomAdapter = MyQuestionAdapter(listOfQuestionInsp2,this)
+        }
 
-        costomAdapter = MyQuestionAdapter(listOfQuestionInsp1,this)
+//        costomAdapter = MyQuestionAdapter(listOfQuestionInsp1,this)
         var layoutManager = LinearLayoutManager(this@Inspection)
         rec_view.layoutManager = layoutManager
         rec_view.adapter = costomAdapter
-        var nItem = costomAdapter!!.getItemCount()
         val infofile : SharedPreferences = this.getSharedPreferences(MyREPONSE, Context.MODE_PRIVATE)
         btn_submit_reponse.setOnClickListener {
 
-            var saved = costomAdapter!!.saveQuestionReponse()
             var savedReponse = costomAdapter!!.getChekedList()
-            Handler().postDelayed({
-                display = costomAdapter!!.getQuestionReponse()
-            },3000)
-//            println("nitem = $nItem")
-//            println("saved = $saved")
-//            println("display = $display")
-            Toast.makeText(this, savedReponse, Toast.LENGTH_LONG).show()
-            println(savedReponse)
             AlertDialogShowReponse(this,savedReponse)
 
+//            var saved = costomAdapter!!.saveQuestionReponse()
 
+//            Handler().postDelayed({
+//                display = costomAdapter!!.getQuestionReponse()
+//            },3000)
+//            Toast.makeText(this, savedReponse, Toast.LENGTH_LONG).show()
+//            println(savedReponse)
         }
 
     }

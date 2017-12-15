@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var urlLogin = ""
-        tv1.text= User.toString()
+//        tv1.text= User.toString()
         var id = 0
         getLoginUser()
         submit.setOnClickListener { // login button
@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
                     startActivity(this)
                 }
             }
-               Toast.makeText(applicationContext, "SUCCESFUL LOGIN", Toast.LENGTH_LONG).show()
+//               Toast.makeText(applicationContext, "SUCCESFUL LOGIN", Toast.LENGTH_LONG).show()
 
             }else {
-                Toast.makeText(applicationContext, "Enter a valdie Login or Password", Toast.LENGTH_LONG).show()
+//                Toast.makeText(applicationContext, "Enter a valdie Login or Password", Toast.LENGTH_LONG).show()
             }
             id ++
             if (remember_me!!.isChecked == true) {

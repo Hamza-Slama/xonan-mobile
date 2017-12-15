@@ -28,7 +28,7 @@ class EventActivity : AppCompatActivity() {
         listOfEvent.add(EventModel("1","usine","Mahdia","21/01/2018","23/01/2018",R.drawable.invalide))
         listOfEvent.add(EventModel("2","cabinet","Sousse","26/01/2018","28/01/2018",R.drawable.invalide))
         listOfEvent.add(EventModel("1","usine","Monastir","29/01/2018","31/01/2018",R.drawable.invalide))
-        listOfEvent.add(EventModel("3","cabinet","Sousse","29/01/2018","31/01/2018",R.drawable.invalide))
+        listOfEvent.add(EventModel("2","cabinet","Sousse","29/01/2018","31/01/2018",R.drawable.invalide))
         listOfEvent.add(EventModel("1","boutique","Sousse","03/02/2018","05/02/2018",R.drawable.invalide))
         listOfEvent.add(EventModel("1","laboratoire","Sousse","07/02/2018","09/02/2018",R.drawable.invalide))
         listOfEvent.add(EventModel("1","bibliotheque","Sousse","07/02/2018","09/02/2018",R.drawable.invalide))
