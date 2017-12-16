@@ -45,6 +45,7 @@ class getDataLoginFromApi() : AsyncTask<Void, Void, String>() {
     override fun doInBackground(vararg p0: Void?): String {
         if (isNetworkAvailable()) {
             hasInternet = true
+            //TODO
             val client = OkHttpClient()
 
 //                val url = "http://eniso.info/ws/login/toto?password=toto1243"
