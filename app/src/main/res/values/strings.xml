@@ -5,7 +5,8 @@
     <string name="dateExp"> 12/12/2017 - 13/12/2017 </string>
 
     <string name="action_settings">Settings</string>
-
+    <string name="username_error">Veuillez saisir votre email</string>
+    <string name="password_error">veuillez saisir le mot de passe</string>
 
     
 </resources>
