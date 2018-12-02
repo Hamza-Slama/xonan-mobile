@@ -1,17 +1,14 @@
 package ia2.moduleproject.eniso.xonan.Services
 
 import android.annotation.SuppressLint
-import ia2.moduleproject.eniso.xonan.Activity.MainActivity
-import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.AsyncTask
-import android.support.v7.app.AppCompatActivity
 import ia2.moduleproject.eniso.xonan.Model.UserInformation
+import ia2.moduleproject.eniso.xonan.utils.isNetworkAvailable
 import okhttp3.OkHttpClient
 import okhttp3.Request
-import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -43,7 +40,7 @@ class getDataLoginFromApi() : AsyncTask<Void, Void, String>() {
     }
 
     override fun doInBackground(vararg p0: Void?): String {
-        if (isNetworkAvailable()) {
+        if (isNetworkAvailable(context!!)) {
             hasInternet = true
             //TODO
             val client = OkHttpClient()
@@ -102,11 +99,7 @@ class getDataLoginFromApi() : AsyncTask<Void, Void, String>() {
         return User!!.toString()
     }
 
-    fun isNetworkAvailable(): Boolean {
-        val connectivityManager = context!!.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo = connectivityManager.activeNetworkInfo
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected
-    }
+
 
 }
 
