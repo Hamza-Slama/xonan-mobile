@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Services
+package ia2.moduleproject.eniso.xonan.services
 
 import android.content.Context
 import com.android.volley.RequestQueue

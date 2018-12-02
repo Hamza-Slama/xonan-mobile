@@ -1,8 +1,8 @@
 package ia2.moduleproject.eniso.xonan.ui.inspection
 
 import android.content.Context
-import ia2.moduleproject.eniso.xonan.Model.QuestionModel
-import ia2.moduleproject.eniso.xonan.Services.InspectionService
+import ia2.moduleproject.eniso.xonan.model.QuestionModel
+import ia2.moduleproject.eniso.xonan.services.InspectionService
 import ia2.moduleproject.eniso.xonan.utils.OnFinish
 
 class InspectionPresenter constructor(val inspectionInteractor : InspectionService):InspectionPresenterView {

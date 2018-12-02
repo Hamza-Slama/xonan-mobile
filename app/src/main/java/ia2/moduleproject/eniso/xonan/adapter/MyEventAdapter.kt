@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import ia2.moduleproject.eniso.xonan.ui.inspection.Inspection
-import ia2.moduleproject.eniso.xonan.Model.EventModel
+import ia2.moduleproject.eniso.xonan.model.EventModel
 import ia2.moduleproject.eniso.xonan.R
 import kotlinx.android.synthetic.main.event_ticket.view.*
 

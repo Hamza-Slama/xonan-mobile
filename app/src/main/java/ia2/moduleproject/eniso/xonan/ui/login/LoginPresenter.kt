@@ -1,10 +1,9 @@
 package ia2.moduleproject.eniso.xonan.ui.login
 
 import android.content.Context
-import android.util.Log
 import android.widget.Toast
-import ia2.moduleproject.eniso.xonan.Model.UserInformationSerialized
-import ia2.moduleproject.eniso.xonan.Services.LoginService
+import ia2.moduleproject.eniso.xonan.model.UserInformationSerialized
+import ia2.moduleproject.eniso.xonan.services.LoginService
 import ia2.moduleproject.eniso.xonan.preffManager.UserController
 import ia2.moduleproject.eniso.xonan.utils.OnLoginFinishedListener
 

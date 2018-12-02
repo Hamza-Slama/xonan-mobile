@@ -2,8 +2,8 @@ package ia2.moduleproject.eniso.xonan.ui.event
 
 import android.content.Context
 import android.widget.Toast
-import ia2.moduleproject.eniso.xonan.Model.EventModel
-import ia2.moduleproject.eniso.xonan.Services.EventService
+import ia2.moduleproject.eniso.xonan.model.EventModel
+import ia2.moduleproject.eniso.xonan.services.EventService
 import ia2.moduleproject.eniso.xonan.utils.OnFinish
 
 class EventPresenter  constructor(val EventInteractor: EventService) : EventPresenterView {

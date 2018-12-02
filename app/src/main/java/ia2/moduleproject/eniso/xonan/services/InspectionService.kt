@@ -1,7 +1,7 @@
-package ia2.moduleproject.eniso.xonan.Services
+package ia2.moduleproject.eniso.xonan.services
 
 import android.content.Context
-import ia2.moduleproject.eniso.xonan.Model.QuestionModel
+import ia2.moduleproject.eniso.xonan.model.QuestionModel
 import ia2.moduleproject.eniso.xonan.utils.OnFinish
 
 class InspectionService {

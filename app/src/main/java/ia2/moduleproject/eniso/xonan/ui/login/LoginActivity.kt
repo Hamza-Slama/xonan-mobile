@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import ia2.moduleproject.eniso.xonan.R
-import ia2.moduleproject.eniso.xonan.Services.LoginService
+import ia2.moduleproject.eniso.xonan.services.LoginService
 import ia2.moduleproject.eniso.xonan.ui.event.EventActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

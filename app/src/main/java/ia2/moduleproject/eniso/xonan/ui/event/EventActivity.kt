@@ -1,14 +1,11 @@
 package ia2.moduleproject.eniso.xonan.ui.event
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import ia2.moduleproject.eniso.xonan.adapter.MyEventAdapter
-import ia2.moduleproject.eniso.xonan.Model.EventModel
+import ia2.moduleproject.eniso.xonan.model.EventModel
 import ia2.moduleproject.eniso.xonan.R
-import ia2.moduleproject.eniso.xonan.Services.EventService
-import ia2.moduleproject.eniso.xonan.preffManager.UserController
-import ia2.moduleproject.eniso.xonan.ui.login.LoginActivity
+import ia2.moduleproject.eniso.xonan.services.EventService
 import kotlinx.android.synthetic.main.activity_event.*
 
 class EventActivity : AppCompatActivity() ,EventView {

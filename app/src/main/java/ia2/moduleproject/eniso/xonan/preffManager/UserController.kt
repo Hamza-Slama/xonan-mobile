@@ -1,7 +1,7 @@
 package ia2.moduleproject.eniso.xonan.preffManager
 
 import com.google.gson.Gson
-import ia2.moduleproject.eniso.xonan.Model.UserInformationSerialized
+import ia2.moduleproject.eniso.xonan.model.UserInformationSerialized
 
 
 class UserController {

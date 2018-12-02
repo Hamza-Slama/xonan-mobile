@@ -1,17 +1,13 @@
 package ia2.moduleproject.eniso.xonan.ui.inspection
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import ia2.moduleproject.eniso.xonan.adapter.MyQuestionAdapter
-import ia2.moduleproject.eniso.xonan.Model.ListOfQuestionModel
-import ia2.moduleproject.eniso.xonan.Model.QuestionModel
+import ia2.moduleproject.eniso.xonan.model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
-import ia2.moduleproject.eniso.xonan.utils.MyREPONSE
-import ia2.moduleproject.eniso.xonan.Dialog.AlertDialogShowReponse
-import ia2.moduleproject.eniso.xonan.Services.InspectionService
+import ia2.moduleproject.eniso.xonan.dialog.AlertDialogShowReponse
+import ia2.moduleproject.eniso.xonan.services.InspectionService
 import kotlinx.android.synthetic.main.activity_inspection.*
 
 class Inspection : AppCompatActivity() ,InspectionView{

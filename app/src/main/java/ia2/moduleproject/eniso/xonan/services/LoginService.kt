@@ -1,13 +1,11 @@
-package ia2.moduleproject.eniso.xonan.Services
+package ia2.moduleproject.eniso.xonan.services
 
 import android.content.Context
-import android.util.Log
-import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.google.gson.Gson
-import ia2.moduleproject.eniso.xonan.Model.UserInformationSerialized
+import ia2.moduleproject.eniso.xonan.model.UserInformationSerialized
 import ia2.moduleproject.eniso.xonan.preffManager.UserController
 import ia2.moduleproject.eniso.xonan.utils.OnLoginFinishedListener
 import ia2.moduleproject.eniso.xonan.utils.isNetworkAvailable

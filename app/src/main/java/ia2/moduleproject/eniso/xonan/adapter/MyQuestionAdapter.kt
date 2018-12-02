@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import ia2.moduleproject.eniso.xonan.Model.QuestionModel
+import ia2.moduleproject.eniso.xonan.model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
 import android.content.SharedPreferences
 import ia2.moduleproject.eniso.xonan.utils.MyREPONSE

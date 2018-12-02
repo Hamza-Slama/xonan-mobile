@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Model
+package ia2.moduleproject.eniso.xonan.model
 
 
 import com.google.gson.annotations.Expose
