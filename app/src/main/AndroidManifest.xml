@@ -23,10 +23,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Inspection">
+        <activity android:name=".ui.inspection.Inspection">
 
         </activity>
-        <activity android:name=".ui.EventActivity">
+        <activity android:name=".ui.event.EventActivity">
 
         </activity>
     </application>
