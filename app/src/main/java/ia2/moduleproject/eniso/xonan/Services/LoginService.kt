@@ -36,7 +36,7 @@ class LoginService {
                                     try {
                                         var r = response.getJSONObject("$1")
                                         var gson = Gson()
-                                        Toast.makeText(context,r.toString(),Toast.LENGTH_SHORT).show()
+//                                        Toast.makeText(context,r.toString(),Toast.LENGTH_SHORT).show()
                                         UserController.saveUserInformationAuth(gson.fromJson(r.toString(), UserInformationSerialized::class.java)!!)
                                         listener.onSuccess(gson.fromJson(r.toString(), UserInformationSerialized::class.java))
                                     } catch (e: JSONException) {
