@@ -7,6 +7,12 @@ import ia2.moduleproject.eniso.xonan.Services.EventService
 import ia2.moduleproject.eniso.xonan.utils.OnFinish
 
 class EventPresenter  constructor(val EventInteractor: EventService) : EventPresenterView {
+
+
+    var ListEvent = ArrayList<EventModel>()
+    private var EventView: EventView? = null
+    private var context: Context? = null
+
     override fun attachView(view: EventView, context: Context) {
         this.EventView = view
         this.context = context
@@ -16,9 +22,6 @@ class EventPresenter  constructor(val EventInteractor: EventService) : EventPres
         this.EventView = view
     }
 
-    var ListEvent = ArrayList<EventModel>()
-    private var EventView: EventView? = null
-    private var context: Context? = null
 
     fun getEvents(context: Context) {
 
