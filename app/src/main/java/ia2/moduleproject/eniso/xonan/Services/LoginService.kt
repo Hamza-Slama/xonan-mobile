@@ -1,6 +1,8 @@
 package ia2.moduleproject.eniso.xonan.Services
 
 import android.content.Context
+import android.util.Log
+import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -21,8 +23,10 @@ class LoginService {
 
     fun login(user: String, password: String, listener: OnLoginFinishedListener<UserInformationSerialized>) {
         var urlLogin = "http://eniso.info/ws/login/$user?password=$password"
+
         if (isNetworkAvailable(context!!)) {
             when {
+
                 user.isEmpty() -> listener.onUsernameError()
                 password.isEmpty() -> listener.onPasswordError()
                 else -> {
@@ -32,6 +36,7 @@ class LoginService {
                                     try {
                                         var r = response.getJSONObject("$1")
                                         var gson = Gson()
+                                        Toast.makeText(context,r.toString(),Toast.LENGTH_SHORT).show()
                                         UserController.saveUserInformationAuth(gson.fromJson(r.toString(), UserInformationSerialized::class.java)!!)
                                         listener.onSuccess(gson.fromJson(r.toString(), UserInformationSerialized::class.java))
                                     } catch (e: JSONException) {
