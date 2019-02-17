@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ia2.moduleproject.eniso.xonan.Activity.EventActivity">
+    tools:context="ia2.moduleproject.eniso.xonan.ui.event.EventActivity">
 
 
     <ListView

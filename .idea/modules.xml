@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
+=======
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> master
       <module fileurl="file://$PROJECT_DIR$/xonan-mobile.iml" filepath="$PROJECT_DIR$/xonan-mobile.iml" />
     </modules>
   </component>

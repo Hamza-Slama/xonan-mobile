@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Model
+package ia2.moduleproject.eniso.xonan.model
 
 /**
  * Created by Hamza on 12/12/2017.

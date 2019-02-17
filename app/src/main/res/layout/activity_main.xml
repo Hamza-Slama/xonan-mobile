@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -92,7 +93,7 @@
                 android:buttonTint="@color/colorAccent"/>
 
             <Button
-                android:id="@+id/submit"
+                android:id="@+id/buttonLogin"
                 style="@style/Base.TextAppearance.AppCompat.Body1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,20 +107,15 @@
                 android:textSize="18sp"
                 android:textStyle="normal" />
 
-            <!--<Button
-                style="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/background_signup"
-                android:clickable="true"
-                android:padding="16dp"
-                android:text="Sign Up"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                android:textStyle="normal" />
--->
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/progress"
+                style="@style/SpinKitView.Small.ThreeBounce"
+                android:layout_width="@dimen/weight_spinkit"
+                android:layout_height="@dimen/height_spinkit"
+                android:layout_below="@+id/buttonLogin"
+                android:visibility="invisible"
+                app1:SpinKit_Color="@color/white" />
+
 
 
 

@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Adapter
+package ia2.moduleproject.eniso.xonan.adapter
 
 /**
  * Created by hamza on 13/12/17.
@@ -9,8 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import ia2.moduleproject.eniso.xonan.Activity.Inspection
-import ia2.moduleproject.eniso.xonan.Model.EventModel
+import ia2.moduleproject.eniso.xonan.ui.inspection.Inspection
+import ia2.moduleproject.eniso.xonan.model.EventModel
 import ia2.moduleproject.eniso.xonan.R
 import kotlinx.android.synthetic.main.event_ticket.view.*
 
@@ -35,7 +35,7 @@ class MyEventAdapter : BaseAdapter {
         EventModelView.tv_event_date.text=" ${EventModel.startDate!!} -  ${EventModel.endDate!!}"
         EventModelView.igStateEvent.setImageResource(EventModel.state!!)
         EventModelView.setOnClickListener {
-            var intent = Intent(context,Inspection::class.java)
+            var intent = Intent(context, Inspection::class.java)
             intent.putExtra("id",EventModel.id!!)
             context!!.startActivity(intent)
 

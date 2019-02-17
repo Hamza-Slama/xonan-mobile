@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Adapter
+package ia2.moduleproject.eniso.xonan.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -8,12 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
-import ia2.moduleproject.eniso.xonan.Model.QuestionModel
+import ia2.moduleproject.eniso.xonan.model.QuestionModel
 import ia2.moduleproject.eniso.xonan.R
-import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
-import android.widget.Toast
-import ia2.moduleproject.eniso.xonan.Constant.MyREPONSE
+import ia2.moduleproject.eniso.xonan.utils.MyREPONSE
 
 
 class MyQuestionAdapter(dataElements: ArrayList<QuestionModel>, context: Context) : RecyclerView.Adapter<MyQuestionAdapter.CostomViewHolder>() {

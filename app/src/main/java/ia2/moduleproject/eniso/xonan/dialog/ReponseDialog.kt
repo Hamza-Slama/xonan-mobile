@@ -1,4 +1,4 @@
-package ia2.moduleproject.eniso.xonan.Dialog
+package ia2.moduleproject.eniso.xonan.dialog
 
 import android.app.AlertDialog
 import android.content.Context

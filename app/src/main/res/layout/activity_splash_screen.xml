@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/Theme.AppCompat.Light.NoActionBar"
-    tools:context="ia2.moduleproject.eniso.xonan.Activity.SplashScreen">
+    tools:context="ia2.moduleproject.eniso.xonan.ui.SplashScreen">
 
 
     <com.felipecsl.gifimageview.library.GifImageView

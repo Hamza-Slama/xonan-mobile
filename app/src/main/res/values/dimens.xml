@@ -26,5 +26,7 @@
     <dimen name="zero_horizontal_margin">0dp</dimen>
 
     <dimen name="start_page_image_size">144dp</dimen>
+    <dimen name="height_spinkit">50dp</dimen>
+    <dimen name="weight_spinkit">150dp</dimen>
 
 </resources>
